@@ -1,4 +1,4 @@
-package client.dao;
+package client.mvc.dao;
 
 import java.util.List;
 import java.util.Map;

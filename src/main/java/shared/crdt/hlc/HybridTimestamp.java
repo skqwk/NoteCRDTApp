@@ -1,9 +1,6 @@
-package client.hlc;
+package shared.crdt.hlc;
 
 import java.time.Instant;
-import java.time.LocalDateTime;
-import java.time.ZoneOffset;
-import java.time.format.DateTimeFormatter;
 
 public class HybridTimestamp implements Comparable<HybridTimestamp> {
     private final long wallClockTime;

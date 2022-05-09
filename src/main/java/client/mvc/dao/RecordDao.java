@@ -1,8 +1,8 @@
-package client.dao;
+package client.mvc.dao;
 
 
-import client.model.Record;
-import client.sqldriver.MessageDriver;
+import client.mvc.model.Record;
+import shared.crdt.sqldriver.MessageDriver;
 
 import java.util.List;
 import java.util.Map;

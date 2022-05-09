@@ -1,4 +1,4 @@
-package client.hlc;
+package shared.crdt.hlc;
 
 
 import java.util.Arrays;

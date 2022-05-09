@@ -1,9 +1,9 @@
 package client.sync;
 
-import client.hlc.HLC;
-import client.hlc.HybridTimestamp;
-import client.sqldriver.MessageDriver;
-import client.sqldriver.StorageDriver;
+import shared.crdt.hlc.HLC;
+import shared.crdt.hlc.HybridTimestamp;
+import shared.crdt.sqldriver.MessageDriver;
+import shared.crdt.sqldriver.StorageDriver;
 import shared.Payload;
 
 import java.io.IOException;

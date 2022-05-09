@@ -1,12 +1,8 @@
-package client.view;
+package client.mvc.view;
 
-import client.dao.Dao;
-import client.dao.RecordDao;
-import client.hlc.HLC;
-import client.model.Record;
-import client.service.RecordService;
-import client.service.Service;
-import client.sqldriver.MessageDriver;
+import client.mvc.model.Record;
+import client.mvc.service.RecordService;
+import client.mvc.service.Service;
 import client.sync.SyncService;
 
 import javax.swing.*;
@@ -40,20 +36,14 @@ public class ClientView extends JFrame {
     private JPanel pane = new JPanel();
 
 
-    public static void main(String[] args) {
-        new ClientView();
+
+    public ClientView(String nodeId, SyncService syncService, RecordService recordService) {
+        super(nodeId);
+        this.syncService = syncService;
+        this.recordService = recordService;
     }
 
-    public ClientView() {
-        String nodeId = "client-" + (System.currentTimeMillis() % 1000);
-        setTitle(nodeId);
-        HLC clock = new HLC(System.currentTimeMillis(), nodeId);
-        MessageDriver driver = new MessageDriver(clock);
-        Dao<Record> recordDao = new RecordDao(driver);
-        syncService = new SyncService(clock, driver);
-        recordService = new RecordService(recordDao);
-
-
+    public void run() {
         pane.setLayout(gridBag);
         configureForm();
 

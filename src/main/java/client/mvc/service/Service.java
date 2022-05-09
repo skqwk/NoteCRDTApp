@@ -1,6 +1,6 @@
-package client.service;
+package client.mvc.service;
 
-import client.dao.Dao;
+import client.mvc.dao.Dao;
 
 import java.util.List;
 import java.util.Map;

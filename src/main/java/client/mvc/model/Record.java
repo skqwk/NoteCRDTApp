@@ -1,4 +1,4 @@
-package client.model;
+package client.mvc.model;
 
 import lombok.Builder;
 import lombok.Getter;

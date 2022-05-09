@@ -1,4 +1,4 @@
-package client.sqldriver;
+package shared.crdt.sqldriver;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

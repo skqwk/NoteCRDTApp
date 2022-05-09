@@ -1,7 +1,7 @@
-package client.sqldriver;
+package shared.crdt.sqldriver;
 
-import client.hlc.HLC;
-import client.hlc.HybridTimestamp;
+import shared.crdt.hlc.HLC;
+import shared.crdt.hlc.HybridTimestamp;
 import client.util.ParserValue;
 
 import java.lang.reflect.Field;

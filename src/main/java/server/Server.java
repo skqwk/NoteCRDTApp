@@ -1,8 +1,8 @@
 package server;
 
-import client.hlc.HLC;
-import client.hlc.HybridTimestamp;
-import client.sqldriver.MessageDriver;
+import shared.crdt.hlc.HLC;
+import shared.crdt.hlc.HybridTimestamp;
+import shared.crdt.sqldriver.MessageDriver;
 import shared.Payload;
 
 import java.io.EOFException;

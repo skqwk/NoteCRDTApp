@@ -1,7 +1,7 @@
-package client.service;
+package client.mvc.service;
 
-import client.dao.Dao;
-import client.model.Record;
+import client.mvc.dao.Dao;
+import client.mvc.model.Record;
 
 public class RecordService extends Service<Record> {
 
