@@ -15,6 +15,6 @@ public class Record implements Serializable {
     private Long id;
     private String tag = "";
     private String title = "";
-    private String content = "";
+//    private String content = "";
     private String author = "";
 }

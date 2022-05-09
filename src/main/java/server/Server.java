@@ -47,26 +47,19 @@ public class Server {
 
                 HybridTimestamp lastReceive;
                 List<Map<String, Object>> messages;
-//                if (request.timestamp != null) {
-//                    lastReceive = HybridTimestamp.parse(request.timestamp);
-//                    messages = messageDriver.readAllSince(lastReceive);
-//                } else {
-//                    messages = messageDriver.readAllMessages();
-//                }
                 messages = messageDriver.readAllMessages();
 
                 // Подготовка к ответу
-                System.out.println("Rows size = " + messages.size());
                 lastReceive = HybridTimestamp.parse(messages.get(0).get("timestamp").toString());
                 for (Map<String, Object> message : messages) {
                     lastReceive = lastReceive.max(HybridTimestamp.parse(message.get("timestamp").toString()));
                 }
 
-
                 Payload response = Payload.builder()
                         .messages(messages)
                         .timestamp(lastReceive.toString())
                         .build();
+
                 // Отправка ответа клиенту
                 output.writeObject(response);
 

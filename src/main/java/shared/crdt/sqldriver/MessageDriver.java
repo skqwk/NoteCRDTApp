@@ -230,7 +230,6 @@ public class MessageDriver {
                     String t2 = row2.get("timestamp").toString();
                     return HybridTimestamp.parse(t1).compareTo(HybridTimestamp.parse(t2));
                 })
-//                .skip(rows.size() - fields)
                 .collect(Collectors.toList());
     }
 

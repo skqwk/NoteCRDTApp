@@ -56,9 +56,6 @@ public class SyncService {
             }
             storageDriver.put("last_send", lastSend);
 
-
-            System.out.println("Rows size = " + messages.size());
-
             // Отправка на сервер
             Payload request = Payload.builder()
                     .messages(messages)
@@ -73,9 +70,6 @@ public class SyncService {
 
             storageDriver.put("last_receive", lastReceive);
             messageDriver.merge(remoteMessages);
-
-            System.out.println("Last send = " + lastSend);
-            System.out.println("Last receive = " + lastReceive);
 
             System.out.println("Server response: " + response);
         } catch (IOException | ClassNotFoundException e) {

@@ -74,7 +74,7 @@ public class ClientView extends JFrame {
         c.gridy = 0;
         c.gridheight = 9;
         c.fill = GridBagConstraints.BOTH;
-        c.insets = new Insets(0, 10, 0,0);
+        c.insets = new Insets(0, 10, 0,5);
         gridBag.setConstraints(scrollPane, c);
         pane.add(scrollPane);
 
@@ -83,7 +83,7 @@ public class ClientView extends JFrame {
         c.gridx = 2;
         c.gridy = 9;
         c.gridheight = GridBagConstraints.REMAINDER;
-        c.insets = new Insets(5, 10, 0, 0);
+        c.insets = new Insets(5, 10, 20, 5);
         c.fill = GridBagConstraints.HORIZONTAL;
         gridBag.setConstraints(sync, c);
         sync.setVisible(true);
@@ -98,7 +98,7 @@ public class ClientView extends JFrame {
         save.addActionListener(this::save);
         c.gridy = 9;
         c.gridwidth = 2;
-        c.insets = new Insets(5, 5, 0, 0);
+        c.insets = new Insets(5, 5, 20, 0);
         c.anchor = GridBagConstraints.NORTHWEST;
         gridBag.setConstraints(save, c);
         pane.add(save);
@@ -276,7 +276,7 @@ public class ClientView extends JFrame {
                 .author(fields.get("author").getText())
                 .tag(fields.get("tag").getText())
                 .title(fields.get("title").getText())
-                .content(fields.get("content").getText())
+//                .content(fields.get("content").getText())
                 .build();
 
         recordService.create(record);
